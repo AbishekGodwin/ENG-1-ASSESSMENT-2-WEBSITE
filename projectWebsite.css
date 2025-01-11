@@ -1,137 +1,167 @@
-body {
-    background-color: rgb(54, 54, 54);
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(94, 94, 94);
-    padding: 10px 20px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Goose</title>
+    <link rel="stylesheet" href="projectWebsite.css">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+    <style>
+        /* Add the following styles for the dropdown */
+        .dropdown {
+            margin: 10px 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
+        .dropdown-btn {
+            background-color: rgba(240, 255, 255, 0.3);
+            border: 1px solid black;
+            padding: 10px 15px;
+            width: 100%;
+            border-radius: 10px;
+            color: white;
+            text-shadow: 2px 2px black;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
 
-#logo {
-    height: 50px;
-}
+        .dropdown-btn:hover {
+            background-color: rgba(200, 215, 215, 0.3);
+            transform: translateY(-2px);
+        }
 
-h1 {
-    font-size: 1.5rem;
-    margin: 0;
-    color: white;
-}
+        .dropdown-content {
+            display: none;
+            padding: 10px 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
 
-a.button {
-    display: inline-block;
-    padding: 10px 15px;
-    border: 1px outset black;
-    border-radius: 10px;
-    color: white;
-    text-shadow: 2px 2px black;
-    background-color: rgba(240, 255, 255, 0.3);
-    text-decoration: none;
-    font-size: 1rem;
-    margin: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease, transform 0.2s;
-}
+        .dropdown-content a {
+            display: block;
+            padding: 5px 0;
+            color: white;
+            text-decoration: none;
+        }
 
-a.button:hover {
-    background-color: rgba(200, 215, 215, 0.3);
-    transform: translateY(-2px);
-}
+        .dropdown-content a:hover {
+            background-color: rgba(200, 215, 215, 0.3);
+        }
 
-.section-container {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
 
-.section-container h2 {
-    color: aliceblue;
-    margin-bottom: 15px;
-}
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Images/CarbonGoose_Logo.png" id="logo" alt="Carbon Goose Logo">
+            <h1>Carbon Goose</h1>
+            <div class="switch-container">
+                <span class="switch-label">Version 1</span>
+                <label class="switch">
+                    <input type="checkbox" id="version-switch" checked>
+                    <span class="slider"></span>
+                </label>
+                <span class="switch-label">Version 2</span>
+            </div>
+        </div>
+    </header>
 
-#gameoverview p {
-    color: white;
-}
+    <main>
+        <section id="gameoverview" class="section-container">
+            <h2>Game Overview</h2>
+            <p>In this single-player game, you will design and build your own university campus, placing key buildings such as lecture halls, accommodations, recreational areas, and restaurants. The game lasts 5 minutes, simulating several years of campus life, and your goal is to maximize student satisfaction by strategically positioning buildings and reacting to events. The campus map has realistic boundaries, like lakes or hills, which influence building placement, while student happiness is affected by factors like proximity to essential services and enjoyable recreation. Throughout the game, you will encounter random events—positive, negative, or neutral—which require careful decision-making to maintain or improve satisfaction. The game ends when time runs out, and the best student satisfaction score wins!</p>
+        </section>
 
-.switch-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: 10px;
-}
+        <section id="downloads" class="section-container">
+            <h2>Download Game</h2>
+            <a href="https://github.com/AdamJ-3141/longboi-life/releases/tag/build-v1.1" class="button" target="_blank">Game Releases</a>
+            <a href="jarfile/longboi-life-ubuntu.jar" class="button" target="_blank">Jar file(Linux)</a>
+            <a href="jarfile/longboi-life-windows.jar" class="button" target="_blank">Jar file(Windows)</a>
+            <a href="jarfile/longboi-life-macos.jar" class="button" target="_blank">Jar file(Macos)</a>
+        </section>
 
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-}
+        <section id="deliverables" class="section-container">
+            <h2>Deliverables</h2>
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
+            <!-- Updated Deliverables Dropdown -->
+            <div class="dropdown">
+                <button class="dropdown-btn">Updated Deliverables</button>
+                <div class="dropdown-content">
+                    <a href="filesV2/Summary.pdf" class="button" download="Summary Report">Summary Report</a>
+                    <a href="filesV2/Architecture" class="button" download="ArchitectureV2">ArchitectureV2</a>
+                    <a href="filesV2/Method Selection and Planning.pdf" class="button" download="Method_PlanningV2">Method Selection and Planning V2</a>
+                    <a href="filesV2/Risk Assessment and Mitigation.pdf" class="button" download="RiskAssessmentV2">Risk Assessment V2</a>
+                    <a href="filesV2/Requirements.pdf" class="button" download="Requirements">Requirements</a>
+                </div>
+            </div>
 
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(34, 139, 34);
-    transition: 0.4s;
-    border-radius: 30px;
-}
+            <!-- Implementation Section Dropdown -->
+            <div class="dropdown">
+                <button class="dropdown-btn">Implementation</button>
+                <div class="dropdown-content">
+                    <a href="filesV1/newImp.pdf" class="button" download="ImplementationV2">Implementation V2</a>
+                </div>
+            </div>
 
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 2px;
-    bottom: 2px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 50%;
-}
+            <!-- Software Testing Section Dropdown -->
+            <div class="dropdown">
+                <button class="dropdown-btn">Software Testing</button>
+                <div class="dropdown-content">
+                    <a href="filesV1/Traceability Matrix.pdf" class="button" download="Traceability Matrix">Traceability Matrix</a>
+                    <a href="filesV1/Testing Report.pdf" class="button" download="Testing Report">Testing Report</a>
+                </div>
+            </div>
 
-input:checked + .slider {
-    background-color: rgb(34, 139, 34);
-}
+            <!-- User Evaluation Section Dropdown -->
+            <div class="dropdown">
+                <button class="dropdown-btn">User Evaluation</button>
+                <div class="dropdown-content">
+                    <a href="filesV1/User Evaluation Responses.pdf" class="button" download="User Evaluation Responses">User Evaluation Responses</a>
+                    <a href="User Evaluation Report.pdf" class="button" download="User Evaluation Report">User Evaluation Report</a>
+                    <div class="dropdown">
+                        <button class="dropdown-btn">Documents and Forms</button>
+                        <div class="dropdown-content">
+                            <a href="filesV1/Consent Form.pdf" class="button" download="Consent Form">Consent Form</a>
+                            <a href="filesV1/Consent Form.pdf" class="button" download="Form 2">Form 2</a>
+                            <a href="filesV1/Consent Form.pdf" class="button" download="Form 3">Form 3</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-input:not(:checked) + .slider {
-    background-color: rgb(70, 130, 180);
-}
+            <!-- Continuous Integration Section Dropdown -->
+            <div class="dropdown">
+                <button class="dropdown-btn">Continuous Integration</button>
+                <div class="dropdown-content">
+                    <a href="continuous_integration_report.pdf" class="button" download="Continuous Integration Report">Continuous Integration Report</a>
+                </div>
+            </div>
+        </section>
 
-input:checked + .slider:before {
-    transform: translateX(30px);
-}
+        <section id="repositories" class="section-container">
+            <h2>Version Control Repositories</h2>
+            <a href="https://github.com/AbishekGodwin/ENG-1-ASSESSMENT-2-WEBSITE" class="button" target="_blank">Website Repo</a>
+            <a href="https://github.com/AdamJ-3141/longboi-life" class="button" target="_blank">Game Repo</a>
+        </section>
+    </main>
+    <script>
+        // JavaScript to toggle dropdown visibility
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            const button = dropdown.querySelector('.dropdown-btn');
+            button.addEventListener('click', () => {
+                dropdown.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
 
-input:not(:checked) + .slider:before {
-    transform: translateX(0);
-}
-
-.switch-label {
-    font-size: 1rem;
-    color: white;
-}
+</html>
