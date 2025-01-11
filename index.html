@@ -7,66 +7,6 @@
     <title>Carbon Goose</title>
     <link rel="stylesheet" href="projectWebsite.css">
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
-    <style>
-        /* Add the following styles for the dropdown */
-        .dropdown {
-            margin: 10px 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .dropdown-btn {
-            background-color: rgba(240, 255, 255, 0.3);
-            border: 1px solid black;
-            padding: 10px 15px;
-            width: 100%;
-            border-radius: 10px;
-            color: white;
-            text-shadow: 2px 2px black;
-            cursor: pointer;
-            font-size: 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s ease, transform 0.2s;
-        }
-
-        .dropdown-btn:hover {
-            background-color: rgba(200, 215, 215, 0.3);
-            transform: translateY(-2px);
-        }
-
-        .dropdown-content {
-            display: none;
-            padding: 10px 15px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Add compact button styles inside dropdown */
-        .dropdown-content a {
-            display: inline-block;
-            padding: 8px 15px;
-            margin: 5px 0;
-            background-color: rgba(240, 255, 255, 0.3);
-            color: white;
-            text-decoration: none;
-            font-size: 0.9rem; /* Smaller font size for compactness */
-            border-radius: 8px;
-            width: auto; /* Auto width for compact look */
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.2s;
-        }
-
-        /* Hover effect for the compact buttons inside dropdown */
-        .dropdown-content a:hover {
-            background-color: rgba(200, 215, 215, 0.3);
-            transform: translateY(-2px);
-        }
-
-        .dropdown.active .dropdown-content {
-            display: block;
-        }
-    </style>
 </head>
 
 <body>
@@ -76,6 +16,7 @@
             <h1>Carbon Goose</h1>
             <div class="switch-container">
                 <span class="switch-label">Version 1</span>
+                <!-- Switch toggle input and slider to control version selection -->
                 <label class="switch">
                     <input type="checkbox" id="version-switch" checked>
                     <span class="slider"></span>
@@ -163,6 +104,7 @@
             <a href="https://github.com/AdamJ-3141/longboi-life" class="button" target="_blank">Game Repo</a>
         </section>
     </main>
+
     <script>
         // JavaScript to toggle dropdown visibility
         const dropdowns = document.querySelectorAll('.dropdown');
@@ -171,6 +113,18 @@
             button.addEventListener('click', () => {
                 dropdown.classList.toggle('active');
             });
+        });
+
+        // JavaScript to handle toggle redirection
+        const versionSwitch = document.getElementById('version-switch');
+        versionSwitch.addEventListener('change', (event) => {
+            if (event.target.checked) {
+                // If Version 1 is selected, do nothing (or redirect if needed)
+                window.location.href = "index.html";
+            } else {
+                // If Version 2 is selected, redirect to index1.html
+                window.location.href = "index1.html";
+            }
         });
     </script>
 </body>
