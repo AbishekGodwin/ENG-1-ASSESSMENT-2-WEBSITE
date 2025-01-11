@@ -41,29 +41,30 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
+        /* Add compact button styles inside dropdown */
         .dropdown-content a {
-            display: block;
-            padding: 5px 10px;
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 5px 0;
+            background-color: rgba(240, 255, 255, 0.3);
             color: white;
             text-decoration: none;
-            font-size: 0.9rem; /* Reduced font size for compactness */
+            font-size: 0.9rem; /* Smaller font size for compactness */
             border-radius: 8px;
-            margin-bottom: 5px; /* Slight margin between buttons */
+            width: auto; /* Auto width for compact look */
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s;
         }
 
+        /* Hover effect for the compact buttons inside dropdown */
         .dropdown-content a:hover {
             background-color: rgba(200, 215, 215, 0.3);
+            transform: translateY(-2px);
         }
 
         .dropdown.active .dropdown-content {
             display: block;
-        }
-
-        /* Adjusting button size inside dropdown */
-        .dropdown-content a.button {
-            padding: 8px 12px;  /* Smaller padding for compact buttons */
-            font-size: 0.9rem;   /* Smaller font size */
-            width: auto;         /* Ensure buttons only take necessary space */
         }
     </style>
 </head>
