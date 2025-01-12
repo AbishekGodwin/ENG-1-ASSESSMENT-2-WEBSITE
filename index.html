@@ -7,8 +7,7 @@
     <title>Carbon Goose</title>
     <link rel="stylesheet" href="projectWebsite.css">
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
-        <style>
-        /* Add the following styles for the dropdown */
+    <style>
         .dropdown {
             margin: 10px 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -41,7 +40,6 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        /* Add compact button styles inside dropdown */
         .dropdown-content a {
             display: inline-block;
             padding: 8px 15px;
@@ -49,15 +47,14 @@
             background-color: rgba(240, 255, 255, 0.3);
             color: white;
             text-decoration: none;
-            font-size: 0.9rem; /* Smaller font size for compactness */
+            font-size: 0.9rem;
             border-radius: 8px;
-            width: auto; /* Auto width for compact look */
+            width: auto;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             transition: background-color 0.3s ease, transform 0.2s;
         }
 
-        /* Hover effect for the compact buttons inside dropdown */
         .dropdown-content a:hover {
             background-color: rgba(200, 215, 215, 0.3);
             transform: translateY(-2px);
@@ -76,7 +73,6 @@
             <h1>Carbon Goose</h1>
             <div class="switch-container">
                 <span class="switch-label">Version 1</span>
-                <!-- Switch toggle input and slider to control version selection -->
                 <label class="switch">
                     <input type="checkbox" id="version-switch" checked>
                     <span class="slider"></span>
@@ -94,7 +90,7 @@
 
         <section id="downloads" class="section-container">
             <h2>Download Game</h2>
-            <a href="https://github.com/AdamJ-3141/longboi-life/releases/tag/build-v1.1" class="button" target="_blank">Game Releases</a>
+            <a href="https://github.com/AdamJ-3141/longboi-life/releases/tag/build-v1.2" class="button" target="_blank">Game Releases</a>
             <a href="jarfile/longboi-life-ubuntu.jar" class="button" target="_blank">Jar file(Linux)</a>
             <a href="jarfile/longboi-life-windows.jar" class="button" target="_blank">Jar file(Windows)</a>
             <a href="jarfile/longboi-life-macos.jar" class="button" target="_blank">Jar file(Macos)</a>
@@ -103,14 +99,13 @@
         <section id="deliverables" class="section-container">
             <h2>Deliverables</h2>
 
-            <!-- Updated Deliverables Dropdown -->
-             <div class="dropdown">
+            <div class="dropdown">
                 <button class="dropdown-btn">JAR File</button>
                 <div class="dropdown-content">
                     <a href="filesV1/Traceability Matrix.xlsx" class="button" download="Jar file">Project Jar File</a>
                 </div>
             </div>
-             <div class="dropdown">
+            <div class="dropdown">
                 <button class="dropdown-btn">Change Report</button>
                 <div class="dropdown-content">
                     <a href="filesV1/Change Report.pdf" class="button" download="Change Report">Change Report</a>
@@ -127,7 +122,6 @@
                 </div>
             </div>
 
-            <!-- Implementation Section Dropdown -->
             <div class="dropdown">
                 <button class="dropdown-btn">Implementation</button>
                 <div class="dropdown-content">
@@ -135,7 +129,6 @@
                 </div>
             </div>
 
-            <!-- Software Testing Section Dropdown -->
             <div class="dropdown">
                 <button class="dropdown-btn">Software Testing</button>
                 <div class="dropdown-content">
@@ -146,7 +139,6 @@
                 </div>
             </div>
 
-            <!-- User Evaluation Section Dropdown -->
             <div class="dropdown">
                 <button class="dropdown-btn">User Evaluation</button>
                 <div class="dropdown-content">
@@ -164,7 +156,6 @@
                 </div>
             </div>
 
-            <!-- Continuous Integration Section Dropdown -->
             <div class="dropdown">
                 <button class="dropdown-btn">Continuous Integration</button>
                 <div class="dropdown-content">
@@ -178,10 +169,60 @@
             <a href="https://github.com/AbishekGodwin/ENG-1-ASSESSMENT-2-WEBSITE" class="button" target="_blank">Website Repo</a>
             <a href="https://github.com/AdamJ-3141/longboi-life" class="button" target="_blank">Game Repo</a>
         </section>
+
+        <section id="projecttimeline" class="section-container">
+            <h2>Project Timeline</h2>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Week 1</button>
+                <div class="dropdown-content">
+                    <a href="Images/Week1.png" target="_blank">
+                        <img src="Images/Week1.png" alt="Week 1 Image" style="width:100%;">
+                    </a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Week 2</button>
+                <div class="dropdown-content">
+                    <a href="Images/Week2.png" target="_blank">
+                        <img src="Images/Week2.png" alt="Week 2 Image" style="width:100%;">
+                    </a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Week 3</button>
+                <div class="dropdown-content">
+                    <a href="Images/Week3.png" target="_blank">
+                        <img src="Images/Week3.png" alt="Week 3 Image" style="width:100%;">
+                    </a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Week 4</button>
+                <div class="dropdown-content">
+                    <a href="Images/Week4.png" target="_blank">
+                        <img src="Images/Week4.png" alt="Week 4 Image" style="width:100%;">
+                    </a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Week 5</button>
+                <div class="dropdown-content">
+                    <a href="Images/Week5.png" target="_blank">
+                        <img src="Images/Week5.png" alt="Week 5 Image" style="width:100%;">
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
     </main>
 
     <script>
-        // JavaScript to toggle dropdown visibility
         const dropdowns = document.querySelectorAll('.dropdown');
         dropdowns.forEach(dropdown => {
             const button = dropdown.querySelector('.dropdown-btn');
@@ -190,14 +231,11 @@
             });
         });
 
-        // JavaScript to handle toggle redirection
         const versionSwitch = document.getElementById('version-switch');
         versionSwitch.addEventListener('change', (event) => {
             if (event.target.checked) {
-                // If Version 1 is selected, do nothing (or redirect if needed)
                 window.location.href = "index.html";
             } else {
-                // If Version 2 is selected, redirect to index1.html
                 window.location.href = "index1.html";
             }
         });
