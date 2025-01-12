@@ -1,0 +1,25 @@
+Test fails if any step cannot be done
+
+Settings, timer and pause test:
+    1. launch game and press play
+    2. note timer is going down
+    3. press pause and note timer has stopped
+    4. click cog to open settings
+    5. slide volume up and note it gets louder
+    6. slide volume to bottom and note it mutes
+    7. close settings and note timer and game resume
+
+Build, move and achievements test:
+    1. launch game and press play
+    2. place a shared accommodation
+    3. note an achievement appears
+    4. click on building and press move
+    5. move the building
+
+Leaderboard and playability test:
+    1. go to %UserProfile%/.prefs on windows or ~/.prefs on windows and linux and delete "leaderboard.xml" and "My Preferences.xml"
+    2. launch game and press play
+    3. play one full game
+    4. note if the game feels relatively playable, enjoyable, simple, varied, intuitive and forgiving
+    5. enter name and note name appears on new leaderboard
+    6. restart game and check leaderboard still has the score you added

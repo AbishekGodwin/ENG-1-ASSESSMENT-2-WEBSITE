@@ -7,6 +7,63 @@
     <title>Carbon Goose</title>
     <link rel="stylesheet" href="projectWebsite.css">
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+    <style>
+        .dropdown {
+            margin: 10px 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .dropdown-btn {
+            background-color: rgba(240, 255, 255, 0.3);
+            border: 1px solid black;
+            padding: 10px 15px;
+            width: 100%;
+            border-radius: 10px;
+            color: white;
+            text-shadow: 2px 2px black;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .dropdown-btn:hover {
+            background-color: rgba(200, 215, 215, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .dropdown-content {
+            display: none;
+            padding: 10px 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .dropdown-content a {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 5px 0;
+            background-color: rgba(240, 255, 255, 0.3);
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-radius: 8px;
+            width: auto;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(200, 215, 215, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,37 +90,156 @@
 
         <section id="downloads" class="section-container">
             <h2>Download Game</h2>
-            <a href="https://github.com/AdamJ-3141/longboi-life/releases/tag/build-v1.1" class="button" target="_blank">Game Releases</a>
-            <a href="https://github.com/AdamJ-3141/longboi-life/releases/download/build-v1.1/longboi-life-ubuntu.jar" class="button" target="_blank">Jar file(Linux)</a>
-            <a href="https://github.com/AdamJ-3141/longboi-life/releases/download/build-v1.1/longboi-life-windows.jar" class="button" target="_blank">Jar file(Windows)</a>
-            <a href="https://github.com/AdamJ-3141/longboi-life/releases/download/build-v1.1/longboi-life-macos.jar" class="button" target="_blank">Jar file(Macos)</a>
+            <a href="https://github.com/AdamJ-3141/longboi-life/releases/tag/build-v1.2" class="button" target="_blank">Game Releases</a>
+            <a href="jarfile/longboi-life-ubuntu.jar" class="button" target="_blank">Jar file(Linux)</a>
+            <a href="jarfile/longboi-life-windows.jar" class="button" target="_blank">Jar file(Windows)</a>
+            <a href="jarfile/longboi-life-macos.jar" class="button" target="_blank">Jar file(Macos)</a>
         </section>
 
         <section id="deliverables" class="section-container">
             <h2>Deliverables</h2>
-            <a href="Arch1.pdf" class="button" download="ArchitectureV1">ArchitectureV2</a>
-            <a href="Impl1.pdf" class="button" download="ImplementationV1">ImplementationV2</a>
-            <a href="Plan1.pdf" class="button" download="Method_PlanningV1">MethodPlanningV2</a>
-            <a href="Risk1.pdf" class="button" download="RiskAssessmentV1">RiskAssessmentV2</a>
-            <a href="Timeline documentation.pdf" class="button" download="Timeline_documentationV1">Timeline_documentationV2</a>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">JAR File</button>
+                <div class="dropdown-content">
+                    <a href="filesV1/Traceability Matrix.xlsx" class="button" download="Jar file">Project Jar File</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Change Report</button>
+                <div class="dropdown-content">
+                    <a href="filesV1/Change Report.pdf" class="button" download="Change Report">Change Report</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Updated Deliverables</button>
+                <div class="dropdown-content">
+                    <a href="filesV1/Architecture.pdf" class="button" download="ArchitectureV2">ArchitectureV2</a>
+                    <a href="filesV1/Method Selection and Planning.pdf" class="button" download="Method_PlanningV2">Method Selection and Planning V2</a>
+                    <a href="filesV1/Risk Assessment and Mitigation.pdf" class="button" download="RiskAssessmentV2">Risk Assessment V2</a>
+                    <a href="filesV1/Requirements.pdf" class="button" download="Requirements">Requirements</a>
+                    <a href="filesV1/Requirements Status.pdf" class="button" download="Requirements Status">Requirements Status</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Implementation</button>
+                <div class="dropdown-content">
+                    <a href="filesV1/Impl2.pdf" class="button" download="ImplementationV2">Implementation V2</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Software Testing</button>
+                <div class="dropdown-content">
+                    <a href="filesV1/Traceability Matrix.xlsx" class="button" download="Traceability Matrix">Traceability Matrix</a>
+                    <a href="filesV1/Testing Report.pdf" class="button" download="Testing Report">Testing Report</a>
+                    <a href="filesV1/ManualTestList.txt" class="button" download="ManualTestList">Manual Test List</a>
+                    <a href="filesV1/test.zip" class="button" download="JaCoCo Test Report">JaCoCo Test Report(Zip file)</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">User Evaluation</button>
+                <div class="dropdown-content">
+                    <a href="filesV1/User Evaluation Responses.pdf" class="button" download="User Evaluation Responses">User Evaluation Responses</a>
+                    <a href="filesV1/User Evaluation Report.pdf" class="button" download="User Evaluation Report">User Evaluation Report</a>
+                    <div class="dropdown">
+                        <button class="dropdown-btn">Documents and Forms</button>
+                        <div class="dropdown-content">
+                            <a href="filesV1/Informed Consent Template.pdf" class="button" download="Informed Consent Template">Informed Consent Template</a>
+                            <a href="filesV1/Information Sheet.pdf" class="button" download="Information Sheet">Information Sheet</a>
+                            <a href="filesV1/CS Fast-Track Ethical Approval Form .pdf" class="button" download="CS Fast-Track Ethical Approval Form">CS Fast-Track Ethical Approval Form</a>
+                            <a href="https://docs.google.com/forms/d/1xMVZpwafM7paaJSLYyI4EJ-nmBtcnCFKT7VFkZnHIso/edit" class="button" download="Consent Form">Consent Form</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Continuous Integration</button>
+                <div class="dropdown-content">
+                    <a href="filesV1/Continuous Integration Report.pdf" class="button" download="Continuous Integration Report">Continuous Integration Report</a>
+                </div>
+            </div>
         </section>
 
         <section id="repositories" class="section-container">
             <h2>Version Control Repositories</h2>
-            <a href="https://github.com/AbishekGodwin/ENG1-Website" class="button" target="_blank">Website Repo</a>
+            <a href="https://github.com/AbishekGodwin/ENG-1-ASSESSMENT-2-WEBSITE" class="button" target="_blank">Website Repo</a>
             <a href="https://github.com/AdamJ-3141/longboi-life" class="button" target="_blank">Game Repo</a>
         </section>
+
+        <section id="projecttimeline" class="section-container">
+            <h2>Project Timeline</h2>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Week 1</button>
+                <div class="dropdown-content">
+                    <a href="filesV1/Week_1.png" target="_blank">
+                        <img src="filesV1/Week_1.png" alt="Week 1 Image" style="width:100%;">
+                    </a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Week 2</button>
+                <div class="dropdown-content">
+                    <a href="filesV1/Week_2.png" target="_blank">
+                        <img src="filesV1/Week_2.png" alt="Week 2 Image" style="width:100%;">
+                    </a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Week 3</button>
+                <div class="dropdown-content">
+                    <a href="filesV1/Week_3.png" target="_blank">
+                        <img src="filesV1/Week_3.png" alt="Week 3 Image" style="width:100%;">
+                    </a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Week 4</button>
+                <div class="dropdown-content">
+                    <a href="filesV1/Week_4.png" target="_blank">
+                        <img src="filesV1/Week_4.png" alt="Week 4 Image" style="width:100%;">
+                    </a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Week 5</button>
+                <div class="dropdown-content">
+                    <a href="filesV1/final.png" target="_blank">
+                        <img src="filesV1/Final.png" alt="Week 5 Image" style="width:100%;">
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
     </main>
+
     <script>
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            const button = dropdown.querySelector('.dropdown-btn');
+            button.addEventListener('click', () => {
+                dropdown.classList.toggle('active');
+            });
+        });
+
         const versionSwitch = document.getElementById('version-switch');
-        versionSwitch.addEventListener('change', function () {
-            if (!this.checked) {
-                window.location.href = 'index1.html';
+        versionSwitch.addEventListener('change', (event) => {
+            if (event.target.checked) {
+                window.location.href = "index.html";
+            } else {
+                window.location.href = "index1.html";
             }
         });
     </script>
 </body>
 
 </html>
-
-           
